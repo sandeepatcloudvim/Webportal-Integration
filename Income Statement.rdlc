@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="LongText_1____LongText_2____LongText_3____LongText_4_">
+          <DataField>LongText_1____LongText_2____LongText_3____LongText_4_</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="USERID">
+          <DataField>USERID</DataField>
+        </Field>
+        <Field Name="TotalLongText">
+          <DataField>TotalLongText</DataField>
+        </Field>
+        <Field Name="HeaderText">
+          <DataField>HeaderText</DataField>
+        </Field>
+        <Field Name="TotalHeaderText">
+          <DataField>TotalHeaderText</DataField>
+        </Field>
+        <Field Name="G_L_Account__TABLENAME__________GLFilter">
+          <DataField>G_L_Account__TABLENAME__________GLFilter</DataField>
+        </Field>
+        <Field Name="GLFilter">
+          <DataField>GLFilter</DataField>
+        </Field>
+        <Field Name="RoundFactorText">
+          <DataField>RoundFactorText</DataField>
+        </Field>
+        <Field Name="EmptyString">
+          <DataField>EmptyString</DataField>
+        </Field>
+        <Field Name="PageGroupNo">
+          <DataField>PageGroupNo</DataField>
+        </Field>
+        <Field Name="NextPageGroupNo">
+          <DataField>NextPageGroupNo</DataField>
+        </Field>
+        <Field Name="G_L_Account_No_">
+          <DataField>G_L_Account_No_</DataField>
+        </Field>
+        <Field Name="Income_StatementCaption">
+          <DataField>Income_StatementCaption</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENOCaption">
+          <DataField>CurrReport_PAGENOCaption</DataField>
+        </Field>
+        <Field Name="Current_PeriodCaption">
+          <DataField>Current_PeriodCaption</DataField>
+        </Field>
+        <Field Name="No_Caption">
+          <DataField>No_Caption</DataField>
+        </Field>
+        <Field Name="PADSTR_____G_L_Account__Indentation___2___G_L_Account__Name_Control1500023Caption">
+          <DataField>PADSTR_____G_L_Account__Indentation___2___G_L_Account__Name_Control1500023Caption</DataField>
+        </Field>
+        <Field Name="CurrentPeriodNetChangeCaption">
+          <DataField>CurrentPeriodNetChangeCaption</DataField>
+        </Field>
+        <Field Name="CurrentPeriodNetChange_Control1500025Caption">
+          <DataField>CurrentPeriodNetChange_Control1500025Caption</DataField>
+        </Field>
+        <Field Name="Current_Period_Last_YearCaption">
+          <DataField>Current_Period_Last_YearCaption</DataField>
+        </Field>
+        <Field Name="Current_YTDCaption">
+          <DataField>Current_YTDCaption</DataField>
+        </Field>
+        <Field Name="Last_YTDCaption">
+          <DataField>Last_YTDCaption</DataField>
+        </Field>
+        <Field Name="G_L_Account___No__of_Blank_Lines_">
+          <DataField>G_L_Account___No__of_Blank_Lines_</DataField>
+        </Field>
+        <Field Name="BlankLineCounter_Number">
+          <DataField>BlankLineCounter_Number</DataField>
+        </Field>
+        <Field Name="G_L_Account___No__">
+          <DataField>G_L_Account___No__</DataField>
+        </Field>
+        <Field Name="PADSTR_____G_L_Account__Indentation___2___G_L_Account__Name">
+          <DataField>PADSTR_____G_L_Account__Indentation___2___G_L_Account__Name</DataField>
+        </Field>
+        <Field Name="ShowAccType">
+          <DataField>ShowAccType</DataField>
+        </Field>
+        <Field Name="G_L_Account___No___Control1500022">
+          <DataField>G_L_Account___No___Control1500022</DataField>
+        </Field>
+        <Field Name="PADSTR_____G_L_Account__Indentation___2___G_L_Account__Name_Control1500023">
+          <DataField>PADSTR_____G_L_Account__Indentation___2___G_L_Account__Name_Control1500023</DataField>
+        </Field>
+        <Field Name="CurrentPeriodNetChange">
+          <DataField>CurrentPeriodNetChange</DataField>
+        </Field>
+        <Field Name="CurrentPeriodNetChangeFormat">
+          <DataField>CurrentPeriodNetChangeFormat</DataField>
+        </Field>
+        <Field Name="CurrentPeriodNetChange_Control1500025">
+          <DataField>CurrentPeriodNetChange_Control1500025</DataField>
+        </Field>
+        <Field Name="CurrentPeriodNetChange_Control1500025Format">
+          <DataField>CurrentPeriodNetChange_Control1500025Format</DataField>
+        </Field>
+        <Field Name="LastYrCurrPeriodNetChange">
+          <DataField>LastYrCurrPeriodNetChange</DataField>
+        </Field>
+        <Field Name="LastYrCurrPeriodNetChangeFormat">
+          <DataField>LastYrCurrPeriodNetChangeFormat</DataField>
+        </Field>
+        <Field Name="CurrentYTDNetChange">
+          <DataField>CurrentYTDNetChange</DataField>
+        </Field>
+        <Field Name="CurrentYTDNetChangeFormat">
+          <DataField>CurrentYTDNetChangeFormat</DataField>
+        </Field>
+        <Field Name="LastYTDNetChange">
+          <DataField>LastYTDNetChange</DataField>
+        </Field>
+        <Field Name="LastYTDNetChangeFormat">
+          <DataField>LastYTDNetChangeFormat</DataField>
+        </Field>
+        <Field Name="G_L_Account___No___Control1500029">
+          <DataField>G_L_Account___No___Control1500029</DataField>
+        </Field>
+        <Field Name="PADSTR_____G_L_Account__Indentation___2___G_L_Account__Name_Control1500030">
+          <DataField>PADSTR_____G_L_Account__Indentation___2___G_L_Account__Name_Control1500030</DataField>
+        </Field>
+        <Field Name="LastYTDNetChange_Control1500031">
+          <DataField>LastYTDNetChange_Control1500031</DataField>
+        </Field>
+        <Field Name="LastYTDNetChange_Control1500031Format">
+          <DataField>LastYTDNetChange_Control1500031Format</DataField>
+        </Field>
+        <Field Name="LastYrCurrPeriodNetChange_Control1500032">
+          <DataField>LastYrCurrPeriodNetChange_Control1500032</DataField>
+        </Field>
+        <Field Name="LastYrCurrPeriodNetChange_Control1500032Format">
+          <DataField>LastYrCurrPeriodNetChange_Control1500032Format</DataField>
+        </Field>
+        <Field Name="CurrentYTDNetChange_Control1500033">
+          <DataField>CurrentYTDNetChange_Control1500033</DataField>
+        </Field>
+        <Field Name="CurrentYTDNetChange_Control1500033Format">
+          <DataField>CurrentYTDNetChange_Control1500033Format</DataField>
+        </Field>
+        <Field Name="CurrentPeriodNetChange_Control1500034">
+          <DataField>CurrentPeriodNetChange_Control1500034</DataField>
+        </Field>
+        <Field Name="CurrentPeriodNetChange_Control1500034Format">
+          <DataField>CurrentPeriodNetChange_Control1500034Format</DataField>
+        </Field>
+        <Field Name="CurrentPeriodNetChange_Control1500035">
+          <DataField>CurrentPeriodNetChange_Control1500035</DataField>
+        </Field>
+        <Field Name="CurrentPeriodNetChange_Control1500035Format">
+          <DataField>CurrentPeriodNetChange_Control1500035Format</DataField>
+        </Field>
+        <Field Name="G_L_Account___Account_Type_">
+          <DataField>G_L_Account___Account_Type_</DataField>
+        </Field>
+        <Field Name="Integer_Number">
+          <DataField>Integer_Number</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>
